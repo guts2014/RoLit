@@ -12,7 +12,7 @@ angular.module('ugracing').service('UpdateData', function($http, $q){
   };
 
   UpdateData.all = function() {
-    return UpdateData.makeRequest('telemetry-api/get-all-values/');
+    return UpdateData.makeRequest('telemetry-api/get-latest-values/');
   };
 
   return UpdateData;
