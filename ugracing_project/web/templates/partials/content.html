@@ -7,27 +7,8 @@
 		<div class="row">
 			<div class="col-md-12">
 				<!-- BEGIN PAGE HEADER-->
-				<div class="page-bar">
-					<ul class="page-breadcrumb">
-						<li>
-							<i class="fa fa-home"></i>
-							<a href="#">Home</a>
-							<i class="fa fa-angle-right"></i>
-						</li>
-						<li>
-							<a href="#">Dashboard</a>
-						</li>
-					</ul>
-					<div class="page-toolbar">
-						<div id="dashboard-report-range" class="pull-right tooltips btn btn-sm btn-default" data-container="body" data-placement="bottom" data-original-title="Change dashboard date range">
-							<i class="icon-calendar"></i>&nbsp;
-							<span class="thin uppercase visible-lg-inline-block"></span>&nbsp;
-							<i class="fa fa-angle-down"></i>
-						</div>
-					</div>
-				</div>
 				<h3 class="page-title">
-				Dashboard <small>dashboard & statistics</small>
+				Dashboard <small>live data feed</small>
 				</h3>
 			</div>
 				<!-- END PAGE HEADER-->
@@ -36,6 +17,32 @@
 				<div dashboard-stat colour="purple-plum" icon="fa-gear" description="Gear" value="55"></div>
 				<div dashboard-stat colour="green-haze" icon="fa-signal" description="Battery" value="55"></div>
 				<div dashboard-stat colour="blue-madison" icon="fa-road" description="Brake" value="55"></div>
+				<!-- BEGIN CHARTS -->
+				<div class="col-md-6">
+					<div class="portlet box blue-madison">
+						<div class="portlet-title">
+							<div class="caption">
+								<i class="fa fa-paper-plane"></i>Live data
+							</div>
+						</div>
+						<div class="portlet-body">
+							<div id="chart-1" style="width:100%; min-width:400px; height:100%; min-height: 400px;"></div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="portlet box blue-madison">
+						<div class="portlet-title">
+							<div class="caption">
+								<i class="fa fa-paper-plane"></i>Live data
+							</div>
+						</div>
+						<div class="portlet-body">
+							<div id="chart-2" style="width:100%; min-width:400px; height:100%; min-height: 400px;"></div>
+						</div>
+					</div>
+				</div>
+				<!-- END CHARTS -->
 				<!-- BEGIN TEMP STATS -->
 				<div dashboard-stat colour="blue-chambray" icon="fa-car" description="Coolant_T" value="47.8"></div>
 				<div dashboard-stat colour="blue-chambray" icon="fa-car" description="Fuel" value="0.8"></div>
@@ -53,7 +60,9 @@
 				<div dashboard-stat colour="blue-chambray" icon="fa-car" description="Wheel_v_1" value="47.249"></div>
 				<div dashboard-stat colour="blue-chambray" icon="fa-car" description="Wheel_v_1" value="48.49"></div>
 				<!-- END TEMP STATS -->
-				<!-- END DASHBOARD STATS -->		
+				<!-- END DASHBOARD STATS -->
+				
+				
 			</div>
 		</div>
 	</div>
