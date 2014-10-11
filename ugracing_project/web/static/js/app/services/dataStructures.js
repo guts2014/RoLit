@@ -4,7 +4,7 @@ angular.module('ugracing').factory('DataStructures', function(){
 
   var DataStructures = {};
 
-  DataStrctures.allData = function() {
+  DataStructures.allData = function() {
     return {
         battery: null,
         brake: null,
