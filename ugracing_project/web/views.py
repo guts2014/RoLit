@@ -1,8 +1,10 @@
 import json
 
-from django.views.decorators.csrf import csrf_exempt
 from django.http import HttpResponse
+from django.template import RequestContext
+from django.shortcuts import render_to_response
 
-@csrf_exempt
 def index(request):
-	return HttpResponse("Hello web!")
+	context = RequestContext(request)
+	context_dict = {'project_name': "UGRacing"}
+	return render_to_response('base.html', context_dict, context)
