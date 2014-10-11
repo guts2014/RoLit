@@ -5,4 +5,4 @@ from django.http import HttpResponse
 
 @csrf_exempt
 def index(request):
-	return HttpResponse("Hello!")
+	return HttpResponse("Hello API!")
