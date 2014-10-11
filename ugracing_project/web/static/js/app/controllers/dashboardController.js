@@ -2,9 +2,9 @@
 
 angular.module('ugracing').controller('dashboardController', ['$scope', 'UpdateData', 'DataLabels', function ($scope, UpdateData, DataLabels) {
 
-	// Get initial data
-	var data = UpdateData.all();
+	// Initialize
+	var data = DataStructures.allData();
 
-	console.log(DataLabels.o2);
+	console.log(data);
 
 }]);
