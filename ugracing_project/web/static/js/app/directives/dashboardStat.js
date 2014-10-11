@@ -5,7 +5,9 @@ angular.module('ugracing').directive('dashboardStat', function() {
         restrict: 'A',
         scope: {
         	colour: "@colour",
-        	icon: "@icon"
+        	icon: "@icon",
+        	description: "@description",
+        	value: "=value"
         },
         templateUrl: 'static/views/directives/dashboard-stat.html'
     };
