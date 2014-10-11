@@ -1,9 +1,10 @@
 'use strict';
 
-angular.module('ugracing').controller('dashboardController', ['$scope', 'UpdateData', function ($scope, UpdateData) {
+angular.module('ugracing').controller('dashboardController', ['$scope', 'UpdateData', 'DataLabels', function ($scope, UpdateData, DataLabels) {
 
-	$scope.items = [1, 2, 3, 5, 8, 13];
+	// Get initial data
+	var data = UpdateData.all();
 
-	console.log(UpdateData.all());
+	console.log(DataLabels.o2);
 
 }]);
