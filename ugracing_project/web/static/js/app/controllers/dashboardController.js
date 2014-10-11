@@ -1,10 +1,9 @@
 'use strict';
 
-angular.module('ugracing').controller('dashboardController', ['$scope', 'UpdateData', 'DataLabels', 'DataStructures', function ($scope, UpdateData, DataLabels, DataStructures) {
+angular.module('ugracing').controller('dashboardController', ['$scope', 'UpdateData', 'DataStructures', function ($scope, UpdateData, DataStructures) {
 
 	// Initialize
-	var data = DataStructures.allData();
-
-	console.log(data);
+	$scope.labels = DataStructures.dataLabels();
+	$scope.data = DataStructures.allData();
 
 }]);
