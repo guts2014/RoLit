@@ -1,12 +1,16 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
 
     <head>
         <title>{{ project_name }}</title>
+
+        <link rel="stylesheet" type="text/css" href="{% static "css/style.css" %}">
+
     </head>
 
     <body>
-        <h1>Hello, {{ project_name }}!</h1>
+        <h1 id="test">Hello, {{ project_name }}!</h1>
         <p>This is a dummy page.</p>        
     </body>
 
