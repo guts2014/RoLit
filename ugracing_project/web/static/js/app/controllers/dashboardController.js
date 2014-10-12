@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('ugracing').controller('dashboardController', ['$scope', '$http', '$interval', 'UpdateData', 'DataStructures', function ($scope, $http, $interval, UpdateData, DataStructures) {
+angular.module('ugracing').controller('dashboardController', ['$scope', '$http', '$interval', 'DataStructures', function ($scope, $http, $interval, DataStructures) {
 
 	// Initialize
 	$scope.labels = DataStructures.dataLabels();
@@ -60,7 +60,7 @@ angular.module('ugracing').controller('dashboardController', ['$scope', '$http',
 
 		var updateInterval = 30;
 
-		var plot = $.plot("#chart-1", [ getRandomData() ], {
+		var plot = $.plot("#chart-1", $scope.chartableDatasetArray, {
 			series: {
 				shadowSize: 0	// Drawing is faster without shadows
 			},
