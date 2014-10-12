@@ -54,7 +54,7 @@ angular.module('ugracing').controller('dashboardController', ['$scope', '$http',
 		//'telemetry-api/get-latest-values/'
 	    $http.get('http://192.168.173.1:8000/telemetry-api/get-latest-values/')
 	    		.success(function(data, status, headers, config) {
-	   	  			for (var key in data) {	   	  				
+	   	  			for (var key in data) {
 	   	  				if (data[key] != null) {
 	   	  					$scope.data[key] = data[key];
 	   	  				}

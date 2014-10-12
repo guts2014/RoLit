@@ -17,34 +17,108 @@
 				<div dashboard-stat colour="purple-plum" icon="fa-gear" description="Gear" value="data.gear"></div>
 				<div dashboard-stat colour="green-haze" icon="fa-road" description="Brake" value="data.brake"></div>
 				<div dashboard-stat colour="blue-madison" icon="fa-signal" description="Throttle" value="data.throttle"></div>
-				<!-- BEGIN CHARTS -->
-				<div class="col-md-9">
-					<div id="chart-1" style="width:100%; min-width:400px; height:100%; min-height: 475px;"></div>
+				<!-- BEGIN TABS -->
+				<div class="clearfix"></div>
+				<div class="col-md-12">
+					<div class="tabbable">
+					  <ul class="nav nav-tabs" class="col-md-12">
+					    <li class="active"><a href="#pane1" data-toggle="tab">Graph view</a></li>
+					    <li><a href="#pane2" data-toggle="tab">Tabular view</a></li>
+					  </ul>
+					  <div class="tab-content" class="col-md-12">
+					    <div id="pane1" class="tab-pane active">
+					    	<div class="col-md-9">
+								<div id="chart-1" style="width:100%; min-width:400px; height:100%; min-height: 475px;"></div>
+							</div>
+							<div class="col-md-3">
+								<div id="legend"></div>
+							</div>
+					    </div>
+					    <div id="pane2" class="tab-pane">
+					    	<div class="col-md-12">
+						    	<div class="table-scrollable">
+									<table class="table table-striped table-hover">
+									<thead>
+									<tr>
+										<th>Speed</th>
+										<th>RPM</th>									
+										<th>Gear</th>
+										<th>Throttle</th>									
+										<th>MAP</th>
+										<th>MAT</th>	
+										<th>O2</th>
+										<th>Battery</th>		
+										<th>Coolant T</th>							
+									</tr>
+									</thead>
+									<tbody>								
+									<tr ng-repeat="i in [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]">
+										<td>{[{(chartableDatasetArray[9].data | reverse)[i][1]}]}</td>
+										<td>{[{(chartableDatasetArray[8].data | reverse)[i][1]}]}</td>
+										<td>{[{(chartableDatasetArray[4].data | reverse)[i][1]}]}</td>
+										<td>{[{(chartableDatasetArray[10].data | reverse)[i][1]}]}</td>		
+										<td>{[{(chartableDatasetArray[5].data | reverse)[i][1]}]}</td>
+										<td>{[{(chartableDatasetArray[6].data | reverse)[i][1]}]}</td>	
+										<td>{[{(chartableDatasetArray[7].data | reverse)[i][1]}]}</td>
+										<td>{[{(chartableDatasetArray[0].data | reverse)[i][1]}]}</td>		
+										<td>{[{(chartableDatasetArray[2].data | reverse)[i][1]}]}</td>	
+									</tr>
+									</tbody>
+									</table>
+								</div>
+							</div>
+							<div class="col-md-6">
+						    	<div class="table-scrollable">
+									<table class="table table-striped table-hover">
+									<thead>
+									<tr>
+										<th>Wheel Temperature 1</th>
+										<th>Wheel Temperature 2</th>									
+										<th>Wheel Temperature 3</th>
+										<th>Wheel Temperature 4</th>						
+									</tr>
+									</thead>
+									<tbody>								
+									<tr ng-repeat="i in [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]">
+										<td>{[{(chartableDatasetArray[11].data | reverse)[i][1]}]}</td>
+										<td>{[{(chartableDatasetArray[12].data | reverse)[i][1]}]}</td>
+										<td>{[{(chartableDatasetArray[13].data | reverse)[i][1]}]}</td>
+										<td>{[{(chartableDatasetArray[14].data | reverse)[i][1]}]}</td>		
+									</tr>
+									</tbody>
+									</table>
+								</div>
+							</div>
+							<div class="col-md-6">
+						    	<div class="table-scrollable" class="col-md-6">
+									<table class="table table-striped table-hover">
+									<thead>
+									<tr>
+										<th>Wheel Velocity 1</th>
+										<th>Wheel Velocity 2</th>									
+										<th>Wheel Velocity 3</th>
+										<th>Wheel Velocity 4</th>						
+									</tr>
+									</thead>
+									<tbody>								
+									<tr ng-repeat="i in [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]">
+										<td>{[{(chartableDatasetArray[15].data | reverse)[i][1]}]}</td>
+										<td>{[{(chartableDatasetArray[16].data | reverse)[i][1]}]}</td>
+										<td>{[{(chartableDatasetArray[17].data | reverse)[i][1]}]}</td>
+										<td>{[{(chartableDatasetArray[18].data | reverse)[i][1]}]}</td>		
+									</tr>
+									</tbody>
+									</table>
+								</div>
+							</div>
+					    </div>
+					  </div><!-- /.tab-content -->
+					</div><!-- /.tabbable -->
 				</div>
-				<div class="col-md-3">
-					<div id="legend"></div>
-				</div>
-				<!-- END CHARTS -->
-				<!-- BEGIN TEMP STATS -->
-				<div dashboard-stat colour="blue-chambray" icon="fa-car" description="Coolant_T" value="47.8"></div>
-				<div dashboard-stat colour="blue-chambray" icon="fa-car" description="Fuel" value="0.8"></div>
-				<div dashboard-stat colour="blue-chambray" icon="fa-car" description="MAP" value="68.8"></div>
-				<div dashboard-stat colour="blue-chambray" icon="fa-car" description="MAT" value="14.1"></div>
-				<div dashboard-stat colour="blue-chambray" icon="fa-car" description="O2" value="4.59"></div>
-				<div dashboard-stat colour="blue-chambray" icon="fa-car" description="RPM" value="2617.0"></div>
-				<div dashboard-stat colour="blue-chambray" icon="fa-car" description="Throttle" value="9.0"></div>
-				<div dashboard-stat colour="blue-chambray" icon="fa-car" description="Wheel_T_1" value="63.526"></div>
-				<div dashboard-stat colour="blue-chambray" icon="fa-car" description="Wheel_T_2" value="62.679"></div>
-				<div dashboard-stat colour="blue-chambray" icon="fa-car" description="Wheel_T_3" value="61.829"></div>
-				<div dashboard-stat colour="blue-chambray" icon="fa-car" description="Wheel_T_4" value="63.043"></div>
-				<div dashboard-stat colour="blue-chambray" icon="fa-car" description="Wheel_v_1" value="49.385"></div>
-				<div dashboard-stat colour="blue-chambray" icon="fa-car" description="Wheel_v_1" value="47.06"></div>
-				<div dashboard-stat colour="blue-chambray" icon="fa-car" description="Wheel_v_1" value="47.249"></div>
-				<div dashboard-stat colour="blue-chambray" icon="fa-car" description="Wheel_v_1" value="48.49"></div>
-				<!-- END TEMP STATS -->
+
+				<!-- END TABS -->
 				<!-- END DASHBOARD STATS -->
-				
-				
+
 			</div>
 		</div>
 	</div>
