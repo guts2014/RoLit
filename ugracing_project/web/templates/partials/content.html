@@ -18,18 +18,15 @@
 				<div dashboard-stat colour="green-haze" icon="fa-signal" description="Battery" value="55"></div>
 				<div dashboard-stat colour="blue-madison" icon="fa-road" description="Brake" value="55"></div>
 				<!-- BEGIN CHARTS -->
-				<div class="col-md-6">
-					<div class="portlet box blue-madison">
-						<div class="portlet-title">
-							<div class="caption">
-								<i class="fa fa-paper-plane"></i>Live data
-							</div>
-						</div>
-						<div class="portlet-body">
-							<div id="chart-1" style="width:100%; min-width:400px; height:100%; min-height: 400px;"></div>
-						</div>
-					</div>
+				<div class="col-md-9">
+					<div id="chart-1" style="width:100%; min-width:400px; height:100%; min-height: 400px;"></div>
 				</div>
+				<div class="col-md-3">
+					<ul>
+						<li ng-repeat="item in chartableDatasetArray">{[{item.label}]}</li>
+					</ul>
+				</div>
+				<!--
 				<div class="col-md-6">
 					<div class="portlet box blue-madison">
 						<div class="portlet-title">
@@ -42,6 +39,7 @@
 						</div>
 					</div>
 				</div>
+				-->
 				<!-- END CHARTS -->
 				<!-- BEGIN TEMP STATS -->
 				<div dashboard-stat colour="blue-chambray" icon="fa-car" description="Coolant_T" value="47.8"></div>

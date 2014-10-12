@@ -28,6 +28,22 @@ angular.module('ugracing').factory('DataStructures', function(){
     };
   };
 
+  DataStructures.allDataChartable = function() {
+
+    var chartableData = DataStructures.allData();
+    var labels = DataStructures.dataLabels();
+
+    angular.forEach(chartableData, function(value, key) {
+        chartableData[key] = {
+            label: labels[key],
+            data: []
+        };
+    });
+
+    return chartableData;
+
+  };
+
   DataStructures.dataLabels = function() {
     return {
         battery: 'Battery',
@@ -38,7 +54,7 @@ angular.module('ugracing').factory('DataStructures', function(){
         map: 'Manifold pressure',
         mat: 'Manifold temperature',
         o2: 'Oxygen',
-        rpm: 'RPM',
+        //rpm: 'RPM',
         speed: 'Speed',
         throttle: 'Throttle',
         wheel_t_1: 'Wheel 1 temperature',
