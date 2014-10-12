@@ -54,7 +54,7 @@ angular.module('ugracing').factory('DataStructures', function(){
         map: 'Manifold pressure',
         mat: 'Manifold temperature',
         o2: 'Oxygen',
-        //rpm: 'RPM',
+        rpm: 'RPM',
         speed: 'Speed',
         throttle: 'Throttle',
         wheel_t_1: 'Wheel 1 temperature',

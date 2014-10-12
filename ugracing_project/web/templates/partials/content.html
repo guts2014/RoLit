@@ -13,33 +13,17 @@
 			</div>
 				<!-- END PAGE HEADER-->
 				<!-- BEGIN DASHBOARD STATS -->
-				<div dashboard-stat colour="red-intense" icon="fa-dashboard" description="Speed" value="120"></div>
-				<div dashboard-stat colour="purple-plum" icon="fa-gear" description="Gear" value="55"></div>
-				<div dashboard-stat colour="green-haze" icon="fa-signal" description="Battery" value="55"></div>
-				<div dashboard-stat colour="blue-madison" icon="fa-road" description="Brake" value="55"></div>
+				<div dashboard-stat colour="red-intense" icon="fa-dashboard" description="Speed" value="data.speed"></div>
+				<div dashboard-stat colour="purple-plum" icon="fa-gear" description="Gear" value="data.gear"></div>
+				<div dashboard-stat colour="green-haze" icon="fa-road" description="Brake" value="data.brake"></div>
+				<div dashboard-stat colour="blue-madison" icon="fa-signal" description="Throttle" value="data.throttle"></div>
 				<!-- BEGIN CHARTS -->
 				<div class="col-md-9">
-					<div id="chart-1" style="width:100%; min-width:400px; height:100%; min-height: 400px;"></div>
+					<div id="chart-1" style="width:100%; min-width:400px; height:100%; min-height: 475px;"></div>
 				</div>
 				<div class="col-md-3">
-					<ul>
-						<li ng-repeat="item in chartableDatasetArray">{[{item.label}]}</li>
-					</ul>
+					<div id="legend"></div>
 				</div>
-				<!--
-				<div class="col-md-6">
-					<div class="portlet box blue-madison">
-						<div class="portlet-title">
-							<div class="caption">
-								<i class="fa fa-paper-plane"></i>Live data
-							</div>
-						</div>
-						<div class="portlet-body">
-							<div id="chart-2" style="width:100%; min-width:400px; height:100%; min-height: 400px;"></div>
-						</div>
-					</div>
-				</div>
-				-->
 				<!-- END CHARTS -->
 				<!-- BEGIN TEMP STATS -->
 				<div dashboard-stat colour="blue-chambray" icon="fa-car" description="Coolant_T" value="47.8"></div>
